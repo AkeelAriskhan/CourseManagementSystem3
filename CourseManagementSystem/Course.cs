@@ -14,5 +14,18 @@ namespace CourseManagementSystem
         public string Duration { get; set; }
 
         public decimal Price { get; set; }
+
+        public Course(int courseId, string title, string duration, decimal price)
+        {
+            CourseId = courseId;
+            Title = title;
+            Duration = duration;
+            Price = price;
+        }
+
+        public override string ToString() 
+        {
+            return $"ID: {CourseId}, Title: {Title}, Duration: {Duration}, Price: {Price}";
+        }
     }
 }
