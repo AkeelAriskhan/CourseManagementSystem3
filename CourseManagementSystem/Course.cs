@@ -14,6 +14,7 @@ namespace CourseManagementSystem
         public string Duration { get; set; }
 
         public decimal Price { get; set; }
+        public static int TotalCourses = 0;
 
         public Course(int courseId, string title, string duration, decimal price)
         {
@@ -21,6 +22,9 @@ namespace CourseManagementSystem
             Title = title;
             Duration = duration;
             Price = price;
+            TotalCourses++;
+
+
         }
 
         public override string ToString() 
