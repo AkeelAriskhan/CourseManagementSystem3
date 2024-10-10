@@ -10,7 +10,8 @@ namespace CourseManagementSystem
     {
         static void Main(string[] args)
         {
-            var coursemanager=new CourseManager();  
+            var coursemanager=new CourseManager(); 
+            var CourseRepository=new CourseRepository();
             bool exit=true;
             while (exit) 
             {
@@ -34,11 +35,13 @@ namespace CourseManagementSystem
                         var Duration=Console.ReadLine();
 
                         var Price = coursemanager.ValidateCoursePrice();
-                        coursemanager.CreateCourse(title, Duration, Price);
+                        //coursemanager.CreateCourse(title, Duration, Price);
+                        CourseRepository.CreateCoursez(title, Duration, Price);
                         break;
                  case 2:
                         Console.Clear();
-                        coursemanager.ReadCourses();
+                        //coursemanager.ReadCourses();
+                        CourseRepository.ReadCourses();
                         break;
                  case 3:
                         Console.Clear();
@@ -50,13 +53,15 @@ namespace CourseManagementSystem
                         var Duration1 = Console.ReadLine();
                         
                         var Price1 = coursemanager.ValidateCoursePrice();  
-                        coursemanager.UpdateCourse(CourseId1,title1,Duration1, Price1);
+                        //coursemanager.UpdateCourse(CourseId1,title1,Duration1, Price1);
+                        CourseRepository.UpdateCourse(CourseId1, title1, Duration1, Price1);
                         break;
                  case 4:
                         Console.Clear();
                         Console.Write("Enter a  Course CourseId");
                         var CourseId2 = Convert.ToInt32(Console.ReadLine());
-                        coursemanager.DeleteCourse(CourseId2);
+                        //coursemanager.DeleteCourse(CourseId2);
+                        CourseRepository.DeleteCourse(CourseId2);
                         break;
                   case 5:
                         exit=false;
