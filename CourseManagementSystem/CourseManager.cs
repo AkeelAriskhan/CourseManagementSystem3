@@ -61,6 +61,27 @@ namespace CourseManagementSystem
                 Console.WriteLine($"course not found");
             }
         }
+        public decimal ValidateCoursePrice()
+        {
+            decimal price=0;
+            while (true) 
+            {
+                Console.Write("Enter  a course price");
+                var newprice=decimal.Parse(Console.ReadLine());
+                if (newprice > 0)
+                {
+
+                    price = newprice;
+                    break;
+                }
+                else {
+                 
+                    Console.WriteLine("invalid price ");
+                
+                }
+            }
+            return price;
+        }
 
     }
 }

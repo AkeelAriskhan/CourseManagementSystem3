@@ -32,8 +32,8 @@ namespace CourseManagementSystem
                         var title=Console.ReadLine();
                         Console.Write("Enter a course Duration");
                         var Duration=Console.ReadLine();
-                        Console.Write("Enter a course Price");
-                        var Price=decimal.Parse(Console.ReadLine());
+
+                        var Price = coursemanager.ValidateCoursePrice();
                         coursemanager.CreateCourse(title, Duration, Price);
                         break;
                  case 2:
@@ -48,8 +48,8 @@ namespace CourseManagementSystem
                         var title1 = Console.ReadLine();
                         Console.Write("Enter a course Duration");
                         var Duration1 = Console.ReadLine();
-                        Console.Write("Enter a course Price");
-                        var Price1 = decimal.Parse(Console.ReadLine());
+                        
+                        var Price1 = coursemanager.ValidateCoursePrice();  
                         coursemanager.UpdateCourse(CourseId1,title1,Duration1, Price1);
                         break;
                  case 4:
