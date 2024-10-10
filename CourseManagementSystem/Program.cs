@@ -30,7 +30,7 @@ namespace CourseManagementSystem
                   case 1:
                         Console.Clear();
                         Console.Write("Enter a Course Title");
-                        var title=Console.ReadLine();
+                        var title= CourseRepository.CapitalizeTitle(  Console.ReadLine());
                         Console.Write("Enter a course Duration");
                         var Duration=Console.ReadLine();
 
@@ -48,7 +48,8 @@ namespace CourseManagementSystem
                         Console.Write("Enter a  Course CourseId");
                         var CourseId1=Convert.ToInt32(Console.ReadLine());
                         Console.Write("Enter a Course Title");
-                        var title1 = Console.ReadLine();
+                        var title1 = CourseRepository.CapitalizeTitle(Console.ReadLine());
+
                         Console.Write("Enter a course Duration");
                         var Duration1 = Console.ReadLine();
                         
