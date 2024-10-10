@@ -157,6 +157,8 @@
     <Compile Include="Course.cs" />
     <Compile Include="CourseManager.cs" />
     <Compile Include="CourseRepository.cs" />
+    <Compile Include="DigitalCourse.cs" />
+    <Compile Include="OnPremisCourse .cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
